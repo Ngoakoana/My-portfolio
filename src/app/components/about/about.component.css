@@ -1,0 +1,182 @@
+.about {
+    text-align: center;
+    padding: 100px;
+    background-color:whitesmoke;
+    position: relative;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.image-container {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+.about-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ddd;
+}
+
+.text-content {
+    flex: 2;
+    padding-left: 20px;
+}
+
+.skills-container {
+    flex: 1;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+}
+
+.skills-list li {
+   
+    color: black;
+    padding: 8px 15px;
+    margin: 5px 0;
+    border-radius: 5px;
+    font-size: 16px;
+    display: inline-block;
+}
+
+        .skill-item {
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+    
+        .skill-item:hover {
+            transform: scale(1.1);
+            color: #4F46E5; /* Indigo color */
+        }
+
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+        
+        body {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 200vh;
+          background: #050801;
+          font-family: "Raleway", sans-serif;
+          font-weight: bold;
+        }
+        
+        a {
+          position: relative;
+          display: inline-block;
+          padding: 20px 24px;  /* Smaller padding */
+          margin: 30px 0;      /* Reduced margin */
+          color: #d1d5db;      /* Light gray text color */
+          text-decoration: none;
+          text-transform: uppercase;
+          transition: 0.5s;
+          letter-spacing: 3px;  /* Reduced letter spacing */
+          overflow: hidden;
+          margin-right: 40px;   /* Adjusted right margin */
+          text-align: center;
+        }
+        
+        a:hover {
+          background: #4b5563;  /* Dark gray background on hover */
+          color: #050801;
+          box-shadow: 0 0 5px #4b5563, 0 0 25px #4b5563, 0 0 50px #4b5563,
+            0 0 200px #4b5563;  /* Gray box-shadow effect */
+          -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+        }
+        
+        a span {
+          position: absolute;
+          display: block;
+          background: linear-gradient(90deg, transparent, #d1d5db);  /* Gray border animation color */
+          transition: all 1s linear;
+        }
+        
+        a span:nth-child(1) {
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          animation: animate1 1s linear infinite;
+        }
+        
+        a span:nth-child(2) {
+          top: -100%;
+          right: 0;
+          width: 2px;
+          height: 100%;
+          animation: animate2 1s linear infinite;
+          animation-delay: 0.25s;
+        }
+        
+        a span:nth-child(3) {
+          bottom: 0;
+          right: 0;
+          width: 100%;
+          height: 2px;
+          animation: animate3 1s linear infinite;
+          animation-delay: 0.5s;
+        }
+        
+        a span:nth-child(4) {
+          bottom: -100%;
+          left: 0;
+          width: 2px;
+          height: 100%;
+          animation: animate4 1s linear infinite;
+          animation-delay: 0.75s;
+        }
+        
+        @keyframes animate1 {
+          0% {
+            left: -100%;
+          }
+          50%, 100% {
+            left: 100%;
+          }
+        }
+        
+        @keyframes animate2 {
+          0% {
+            top: -100%;
+          }
+          50%, 100% {
+            top: 100%;
+          }
+        }
+        
+        @keyframes animate3 {
+          0% {
+            right: -100%;
+          }
+          50%, 100% {
+            right: 100%;
+          }
+        }
+        
+        @keyframes animate4 {
+          0% {
+            bottom: -100%;
+          }
+          50%, 100% {
+            bottom: 100%;
+          }
+        }
+        
+    
