@@ -41,6 +41,14 @@ export class ProjectsComponent {
       description: "A gym membership and workout tracking application.",
       link: "https://github.com/The-DigitalAcademy/Group-B_Gym.git",
       image: "https://i.pinimg.com/736x/44/1e/85/441e8559a94328a48d7149fd645eb10b.jpg"
+    },
+    {
+      name: "In need",
+      description: "Indeed is a donation app that connects sponsors with organizations to support meaningful causes.",
+      link: " https://github.com/GuguM22/In-need-backend.git",
+      image: "https://i.pinimg.com/1200x/30/43/e1/3043e1fc388e29007e7ae963e6f5b7cd.jpg"
     }
+    
+
   ];
 }

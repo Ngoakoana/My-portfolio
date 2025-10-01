@@ -1,92 +1,75 @@
-.empowerment-container {
-    background-color: #ffffff;
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    width: 80%;
-    max-width: 900px;
-    margin: 50px auto;
+/* Main Showcase Card */
+.showcase-container {
+    background: #ffffff;
+    padding: 40px 20px;
+    border-radius: 20px;
+    box-shadow: 0 18px 36px rgba(0, 0, 0, 0.15);
+    width: 95%;
+    max-width: 1100px;
+    margin: 0 auto;
     text-align: center;
-    font-family: 'Arial', sans-serif;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.showcase-container:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 42px rgba(0, 0, 0, 0.2);
 }
 
-h1 {
-    color: black;
-    font-size: 36px;
+/* Section Titles */
+.section-title {
+    font-size: 2rem; /* mobile base */
+    font-weight: 800;
     margin-bottom: 20px;
+    letter-spacing: 0.5px;
+}
+@media (min-width: 768px) {
+    .section-title { font-size: 2.6rem; }
+}
+@media (min-width: 1024px) {
+    .section-title { font-size: 3rem; }
 }
 
-p {
-    font-size: 18px;
-    color: #333;
-    line-height: 1.8;
+/* Sparkle Bling Effect ✨ */
+.bling {
+    background: linear-gradient(90deg, #6366f1, #8b5cf6, #ec4899, #6366f1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 300% auto;
+    animation: shine 4s linear infinite;
+}
+@keyframes shine {
+    0% { background-position: 0% center; }
+    100% { background-position: 300% center; }
+}
+
+/* Text */
+.section-text {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.7;
     margin-bottom: 30px;
 }
+@media (min-width: 768px) {
+    .section-text { font-size: 1.1rem; }
+}
 
-.images-container {
+/* Images Layout */
+.images-container, .model-images-container {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
+    margin-bottom: 40px;
 }
 
-.empowerment-image {
-    width: 45%;
-    max-width: 100%;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+.empowerment-image, .model-image {
+    width: 100%;
+    max-width: 420px;
+    border-radius: 14px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
-
-.empowerment-image:hover {
+.empowerment-image:hover, .model-image:hover {
     transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-/* Fashion Model Section */
-.fashion-model-container {
-    background-color: #f9f9f9;
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    width: 80%;
-    max-width: 900px;
-    margin: 50px auto;
-    text-align: center;
-}
-
-.fashion-model-container h2 {
-    color: black;
-    font-size: 32px;
-    margin-bottom: 20px;
-}
-
-.fashion-model-container p {
-    font-size: 18px;
-    color: #333;
-    line-height: 1.8;
-    margin-bottom: 30px;
-}
-
-.model-images-container {
-    display: flex;
-    justify-content: space-around;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.model-image {
-    width: 45%;
-    max-width: 100%;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.model-image:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 16px 28px rgba(0, 0, 0, 0.25);
 }

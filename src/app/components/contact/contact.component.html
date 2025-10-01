@@ -1,105 +1,54 @@
-<!-- <app-navbar></app-navbar>
+<app-navbar></app-navbar>
 
- <section class="h-screen flex items-center justify-center bg-transparent">
-    <div class="max-w-3xl mx-auto px-6 text-center border-2 border-gray-300 rounded-xl p-10 shadow-lg backdrop-blur-md bg-white/10" id="contact-section">
-        <h2 class="text-4xl font-bold text-gray-700 mb-6">Let's Connect</h2>
-        <p class="text-lg text-gray-600 mb-8">
-            I'm open to collaborations, projects, and networking opportunities. Feel free to reach out!
-        </p>
-        <button 
-            class="inline-flex items-center justify-center bg-gray-600 text-white text-lg font-medium px-8 py-3 rounded-lg shadow-md hover:bg-lightgray-700 transition-all duration-300"
-            (click)="showContactModal()"
-            id="contact-button"
-        >
-            Contact Me
-        </button>
-    </div>
+<section class="connect-section">
+  <div class="max-w-3xl text-center mx-auto px-6 py-16">
+    <h2 class="connect-title bling">Let's Connect</h2>
+    <p class="connect-text">
+      I'm open to collaborations, projects, and networking opportunities. Feel free to reach out!
+    </p>
+    <button (click)="showContactModal()" class="connect-button">Contact Me</button>
+  </div>
 </section>
 
-<div *ngIf="isModalVisible" class="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50">
-    <div class="bg-white p-6 rounded-lg max-w-md w-full shadow-lg">
-        <h3 class="text-2xl font-bold text-gray-700 mb-4">Contact Details</h3>
-        <div class="text-lg text-gray-600 space-y-3">
-            <p><strong>Phone:</strong> 076 403 9976</p>
-            <p><strong>Email:</strong> <a href="mailto:mphagonr460@gmail.com" class="text-gray-700 hover:underline">mphagonr460"&#64;"gmail.com</a></p>
-            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/ngoakoana-mphago-a2235a329" target="_blank" class="text-gray-700 hover:underline">View Profile</a></p>
-            <p><strong>GitHub:</strong> <a href="https://github.com/account" target="_blank" class="text-gray-700 hover:underline">Visit GitHub</a></p>
-        </div>
-        
-        <div class="mt-6 text-center">
-            <button (click)="closeModal()" class="bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700 transition-all duration-300">
-                Close
-            </button>
-        </div>
-    </div>
+<!-- Contact Modal -->
+<div *ngIf="isModalVisible" class="modal-overlay">
+  <div class="modal-box">
+    <h3>Contact Details</h3>
+
+    <p>
+      <strong>Phone:</strong>
+      <a href="tel:+27764039976">
+        <img src="https://cdn-icons-gif.flaticon.com/11781/11781835.gif" class="w-6 h-6">
+        076 403 9976
+      </a>
+    </p>
+
+    <p>
+      <strong>Email:</strong>
+      <a href="mailto:mphagonr460@gmail.com">
+        <img src="https://cdn-icons-gif.flaticon.com/8717/8717946.gif" class="w-6 h-6">
+        mphagonr460&#64;com
+      </a>
+    </p>
+
+    <p>
+      <strong>LinkedIn:</strong>
+      <a href="https://www.linkedin.com/in/ngoakoana-mphago-a2235a329" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/128/3536/3536505.png" class="w-6 h-6">
+        View Profile
+      </a>
+    </p>
+
+    <p>
+      <strong>GitHub:</strong>
+      <a href="https://github.com/account" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/128/733/733553.png" class="w-6 h-6">
+        Visit GitHub
+      </a>
+    </p>
+
+    <button (click)="closeModal()">Close</button>
+  </div>
 </div>
 
-<app-footer></app-footer> 
- -->
- <app-navbar></app-navbar>
-
- <section class="h-screen flex items-center justify-center bg-transparent">
-     <div class="max-w-3xl mx-auto px-6 text-center border-2 border-gray-300 rounded-xl p-10 shadow-lg backdrop-blur-md bg-white/10" id="contact-section">
-         <h2 class="text-4xl font-bold text-gray-700 mb-6">Let's Connect</h2>
-         <p class="text-lg text-gray-600 mb-8">
-             I'm open to collaborations, projects, and networking opportunities. Feel free to reach out!
-         </p>
-         <button 
-             class="inline-flex items-center justify-center bg-gray-600 text-white text-lg font-medium px-8 py-3 rounded-lg shadow-md hover:bg-gray-700 transition-all duration-300"
-             (click)="showContactModal()"
-             id="contact-button"
-         >
-             Contact Me
-         </button>
-     </div>
- </section>
- 
- <!-- Contact Modal -->
- <div *ngIf="isModalVisible" class="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50">
-     <div class="bg-white p-6 rounded-lg max-w-md w-full shadow-lg">
-         <h3 class="text-2xl font-bold text-gray-700 mb-4">Contact Details</h3>
-         <div class="text-lg text-gray-600 space-y-3 text-center">
- 
-             <p>
-                 <strong>Phone:</strong> 
-                 <a href="tel:+27764039976" class="flex items-center justify-center space-x-2 text-gray-700 hover:underline">
-                     <img src="https://cdn-icons-gif.flaticon.com/11781/11781835.gif" alt="Phone Icon" class="w-6 h-6">
-                     <span>076 403 9976</span>
-                 </a>
-             </p>
- 
-             <p>
-                 <strong>Email:</strong> 
-                 <a href="mailto:mphagonr460@gmail.com" class="flex items-center justify-center space-x-2 text-gray-700 hover:underline">
-                     <img src="https://cdn-icons-gif.flaticon.com/8717/8717946.gif" alt="Email Icon" class="w-6 h-6">
-                     <span>mphagonr460 &#64; gmail.com</span>
-                 </a>
-             </p>
- 
-             <p>
-                 <strong>LinkedIn:</strong> 
-                 <a href="https://www.linkedin.com/in/ngoakoana-mphago-a2235a329" target="_blank" class="flex items-center justify-center space-x-2 text-gray-700 hover:underline">
-                     <img src="https://cdn-icons-png.flaticon.com/128/3536/3536505.png" alt="LinkedIn Icon" class="w-6 h-6">
-                     <span>View Profile</span>
-                 </a>
-             </p>
- 
-             <p>
-                 <strong>GitHub:</strong> 
-                 <a href="https://github.com/account" target="_blank" class="flex items-center justify-center space-x-2 text-gray-700 hover:underline">
-                     <img src="https://cdn-icons-png.flaticon.com/128/733/733553.png" alt="GitHub Icon" class="w-6 h-6">
-                     <span>Visit GitHub</span>
-                 </a>
-             </p>
-         </div>
-         
-         <div class="mt-6 text-center">
-             <button (click)="closeModal()" class="bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700 transition-all duration-300">
-                 Close
-             </button>
-         </div>
-     </div>
- </div>
- 
- <app-footer></app-footer>
- 
+<app-footer></app-footer>

@@ -1,203 +1,124 @@
+/* Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: #050801;
-    font-family: "Raleway", sans-serif;
-    font-weight: bold;
-  }
-  
-  .home {
-    text-align: center;
-    padding: 200px;
-    background: url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97') no-repeat center center/cover;
-    color: lightslategray; /* Ensures text remains visible */
-    /* height: 100vh; */
-  }
-  
-  .container {
-    max-width: 900px;
-    margin: auto;
-    background: rgba(56, 55, 55, 0.592); /* Dark overlay for better readability */
-    padding: 30px;
-    border-radius: 10px;
-    text-align: center;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  background: #0f0f0f;
+  color: #eaeaea;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hero Section */
+.home {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+    url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97') 
+    no-repeat center center/cover;
+  text-align: center;
+}
+
+/* Glass container */
+.container {
+  max-width: 800px;
+  padding: 50px 40px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.45);
+}
+
+/* Headings with Bling ✨ */
+h1 {
+  font-size: 3.2rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  letter-spacing: 1.5px;
+}
+
+.bling {
+  background: linear-gradient(90deg, #6366f1, #8b5cf6, #ec4899, #6366f1);
+  background-size: 400% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 6s linear infinite;
+}
+
+@keyframes shine {
+  0% { background-position: 0% center; }
+  100% { background-position: 400% center; }
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #dcdcdc;
+}
+
+/* Highlighted moving text */
+.moving-text {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #a78bfa;
+  animation: moveText 4s ease-in-out infinite;
+}
+
+@keyframes moveText {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* CTA buttons */
+.cta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 35px;
+}
+
+.button {
+  padding: 14px 32px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  border-radius: 35px;
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+}
+
+.button:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 8px 24px rgba(139, 92, 246, 0.6);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
   h1 {
-    color: #f1f1f1;
-    font-size: 2.5em; /* Reduced size */
+    font-size: 2.4rem;
   }
-  
   p {
-    font-size: 1em; /* Reduced size */
-    color: white;
-    line-height: 1.8;
+    font-size: 1rem;
   }
-  
-  .cta {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 30px;
-    gap: 20px;
+  .container {
+    padding: 30px 20px;
   }
-  
-  .moving-text {
-    display: inline-block;
-    font-weight: bold;
-    font-size: 0.9em; /* Reduced size */
-    color: whitesmoke;
-    animation: moveText 3s ease-in-out infinite;
-  }
-  
-  @keyframes moveText {
-    0% {
-      transform: translateX(0);
-    }
-    25% {
-      transform: translateX(20px);
-    }
-    50% {
-      transform: translateX(0);
-    }
-    75% {
-      transform: translateX(-20px);
-    }
-    100% {
-      transform: translateX(0);
-    }
-  }
-  
-  .button {
-    padding: 10px 20px;
-    margin: 10px;
-    background-color: darkgray;
-    color: black;
-    text-decoration: none;
-    font-size: 1em; /* Reduced size */
-    border-radius: 5px;
-    transition: background-color 0.3s;
-  }
-  
-  .button:hover {
-    background-color: lightgray;
-    color: black;
-  }
-  
-  .button:focus {
-    outline: none;
-  }
-  
-  a {
-    position: relative;
-    display: inline-block;
-    padding: 20px 25px; /* Slightly reduced padding */
-    margin: 40px 0;
-    color: grey; /* Changed to grey */
-    text-decoration: none;
-    text-transform: uppercase;
-    transition: 0.5s;
-    letter-spacing: 3px; /* Reduced spacing */
-    overflow: hidden;
-    margin-right: 50px;
-  }
-  
-  a:hover {
-    background: grey; /* Hover background changed to grey */
-    color: #050801;
-    box-shadow: 0 0 5px grey, 0 0 25px grey, 0 0 50px grey, 0 0 200px grey;
-    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
-  }
-  
-  a span {
-    position: absolute;
-    display: block;
-  }
-  
-  a span:nth-child(1) {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, grey); /* Changed to grey */
-    animation: animate1 1s linear infinite;
-  }
-  
-  @keyframes animate1 {
-    0% {
-      left: -100%;
-    }
-    50%,
-    100% {
-      left: 100%;
-    }
-  }
-  
-  a span:nth-child(2) {
-    top: -100%;
-    right: 0;
-    width: 2px;
-    height: 100%;
-    background: linear-gradient(180deg, transparent, grey); /* Changed to grey */
-    animation: animate2 1s linear infinite;
-    animation-delay: 0.25s;
-  }
-  
-  @keyframes animate2 {
-    0% {
-      top: -100%;
-    }
-    50%,
-    100% {
-      top: 100%;
-    }
-  }
-  
-  a span:nth-child(3) {
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(270deg, transparent, grey); /* Changed to grey */
-    animation: animate3 1s linear infinite;
-    animation-delay: 0.5s;
-  }
-  
-  @keyframes animate3 {
-    0% {
-      right: -100%;
-    }
-    50%,
-    100% {
-      right: 100%;
-    }
-  }
-  
-  a span:nth-child(4) {
-    bottom: -100%;
-    left: 0;
-    width: 2px;
-    height: 100%;
-    background: linear-gradient(360deg, transparent, grey); /* Changed to grey */
-    animation: animate4 1s linear infinite;
-    animation-delay: 0.75s;
-  }
-  
-  @keyframes animate4 {
-    0% {
-      bottom: -100%;
-    }
-    50%,
-    100% {
-      bottom: 100%;
-    }
-  }
-  
+}

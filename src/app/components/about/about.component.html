@@ -1,120 +1,188 @@
-<app-navbar></app-navbar>
-<section class="about">
-    <div class="container px-6 py-12 mx-auto">
-        
-        <a href="javascript:history.back()" class="back-button text-lg text-gray-700 hover:text-gray-900">← Back</a>
+<div class="min-h-screen flex flex-col mt-12">
 
-        <div class="image-container my-8 text-center">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQd6he3xpzjNW_2FQ9jKNnjqgwBKbCuMY_poQ&s" alt="Ngoakoana Precious Mphago" class="about-image w-80 h-40 md:w-60 md:h-60 rounded-full mx-auto">
+  <app-navbar></app-navbar>
+
+  <!-- About Section -->
+  <section class="about flex-grow bg-gradient-to-br from-indigo-50 to-purple-50 py-12">
+    <div class="container mx-auto px-6 md:px-10">
+
+      <!-- Back Button -->
+      <a 
+        href="javascript:history.back()" 
+        class="inline-flex items-center text-base md:text-lg text-gray-500 hover:text-indigo-500 font-medium mb-6 transition-colors duration-300"
+      >
+        ← Back
+      </a>
+
+      <!-- About Content -->
+      <div class="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-12">
+
+        <!-- Clickable Profile Image with shimmer -->
+        <div class="flex-shrink-0 relative group">
+          <img 
+            src="https://avatars.githubusercontent.com/u/169890374?s=400&u=6366f6efe5e9a1e24052a5f91511aceb03158539&v=4" 
+            alt="Ngoakoana Precious Mphago" 
+            class="w-40 h-40 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-full shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
+          >
+          <div class="absolute inset-0 rounded-full bg-gradient-to-r from-indigo-400 via-purple-400 to-indigo-400 opacity-40 blur-xl animate-shimmer pointer-events-none"></div>
         </div>
 
-        <div class="text-content text-center md:text-left mt-8">
-            <h1 class="text-3xl font-semibold text-gray-900 mb-4">About Me</h1>
-            <p class="text-lg text-gray-700 mb-4">
-                <p>Hi, I'm <strong>Hi, I'm <span class="font-bold text-indigo-600 hover:text-indigo-800 transition-colors duration-300">Ngoakoana Precious Mphago</span></strong>, a passionate System developer from Limpopo, South Africa.</p>
-            
-            <p class="text-base text-gray-600 mb-6">
-                I specialize in Information Technology System Support and System Development. 
-                As a burn survivor and disability advocate, I am committed to creating inclusive and accessible technology solutions.
-            </p>
-            
-            
-            <a 
-           
-            class="inline-flex items-center justify-center bg-gray-600 text-white text-lg font-medium px-8 py-3 rounded-lg shadow-md hover:bg-gray-700 transition-all duration-300"
-            (click)="showContactModal()"
-            id="contact-button"
-        >
-            Contact Me
-        </a>
+        <!-- About Text -->
+        <div class="text-center md:text-left flex-1 space-y-4">
+          <h1 class="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 animate-shimmer-text">
+            About Me
+          </h1>
+          <p class="text-lg text-gray-700">
+            Hi, I'm <span class="font-semibold text-indigo-600 hover:text-indigo-800 transition-colors duration-300">Ngoakoana Precious Mphago</span>, a passionate System Developer from Limpopo, South Africa.
+          </p>
+          <p class="text-gray-600">
+            I specialize in Information Technology System Support and Software Development, focusing on innovative, efficient, and inclusive technology solutions.
+            As a burn survivor and disability advocate, I am committed to creating accessible, user-friendly technologies that empower everyone. My mission is to leverage technology to solve real-world problems and positively impact my community.
+          </p>
+
+          <!-- Contact Me Button -->
+          <a
+            [routerLink]="['/contact']"
+            class="relative inline-block px-6 py-3 text-white font-semibold rounded-lg overflow-hidden bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 hover:from-indigo-600 hover:to-purple-600 transition-all duration-300 group"
+          >
+            <span class="relative z-10">Contact Me</span>
+            <span class="absolute inset-0 bg-white opacity-10 animate-shimmer-blink pointer-events-none"></span>
+          </a>
         </div>
-        
-    </div>
-    <div class="skills-section text-center md:text-left mt-8 px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl font-bold text-gray-900 mb-6">Skills</h2>
-        <ul class="text-lg text-gray-700 grid grid-cols-2 md:grid-cols-3 gap-6">
-            <li class="skill-item flex items-center justify-center gap-3 transition-transform transform hover:scale-105 hover:text-indigo-600">
-                <img src="https://img.icons8.com/?size=100&id=20909&format=png&color=000000" alt="HTML" class="w-8 h-8">
-                <span class="text-gray font-semibold">HTML</span>
-            </li>
-            <li class="skill-item flex items-center justify-center gap-3 transition-transform transform hover:scale-105 hover:text-indigo-600">
-                <img src="https://img.icons8.com/?size=100&id=WlXoMrd84l96&format=png&color=000000" alt="CSS" class="w-8 h-8">
-                <span class="text-gray font-semibold">CSS</span>
-            </li>
-            <li class="skill-item flex items-center justify-center gap-3 transition-transform transform hover:scale-105 hover:text-indigo-600">
-                <img src="https://img.icons8.com/?size=100&id=108784&format=png&color=000000" alt="JavaScript" class="w-8 h-8">
-                <span class="text-gray font-semibold">JavaScript</span>
-            </li>
-            <li class="skill-item flex items-center justify-center gap-3 transition-transform transform hover:scale-105 hover:text-indigo-600">
-                <img src="https://img.icons8.com/?size=100&id=rgPSE6nAB766&format=png&color=000000" alt="Databases" class="w-8 h-8">
-                <span class="text-gray font-semibold">MySQL</span>
-            </li>
-            <li class="skill-item flex items-center justify-center gap-3 transition-transform transform hover:scale-105 hover:text-indigo-600">
-                <img src="https://img.icons8.com/?size=100&id=19293&format=png&color=000000" alt="Frontend Development" class="w-8 h-8">
-                <span class="text-gray font-semibold">Frontend Development</span>
-            </li>
-            <li class="skill-item flex items-center justify-center gap-3 transition-transform transform hover:scale-105 hover:text-indigo-600">
-                <img src="https://img.icons8.com/?size=100&id=44484&format=png&color=000000" alt="Backend Development" class="w-8 h-8">
-                <span class="text-gray font-semibold">Backend Development</span>
-            </li>
-            <li class="skill-item flex items-center justify-center gap-3 transition-transform transform hover:scale-105 hover:text-indigo-600">
-                <img src="https://img.icons8.com/?size=100&id=q8l2X20yd72l&format=png&color=000000" alt="TypeScript" class="w-8 h-8">
-                <span class="text-gray font-semibold">TypeScript</span>
-            </li>
-            <li class="skill-item flex items-center justify-center gap-3 transition-transform transform hover:scale-105 hover:text-indigo-600">
-                <img src="https://img.icons8.com/?size=100&id=hsPbhkOH4FMe&format=png&color=000000" alt="Node.js" class="w-8 h-8">
-                <span class="text-gray font-semibold">Node.js</span>
-            </li>
-            <li class="skill-item flex items-center justify-center gap-3 transition-transform transform hover:scale-105 hover:text-indigo-600">
-                <img src="https://img.icons8.com/?size=100&id=dSnah6CSCxRG&format=png&color=000000" alt="Angular" class="w-8 h-8">
-                <span class="text-gray font-semibold">Angular</span>
-            </li>
-            <li class="skill-item flex items-center justify-center gap-3 transition-transform transform hover:scale-105 hover:text-indigo-600">
-                <img src="https://img.icons8.com/?size=100&id=WoopfRcDj3RF&format=png&color=000000" alt="Tailwind CSS" class="w-8 h-8">
-                <span class="text-gray font-semibold">Tailwind CSS</span>
-            </li>
-            <li class="skill-item flex items-center justify-center gap-3 transition-transform transform hover:scale-105 hover:text-indigo-600">
-                <img src="https://img.icons8.com/?size=100&id=efFfwotdkiU5&format=png&color=000000" alt="GitHub" class="w-8 h-8">
-                <span class="text-gray font-semibold">GitHub</span>
-            </li>
-            <li class="skill-item flex items-center justify-center gap-3 transition-transform transform hover:scale-105 hover:text-indigo-600">
-                <img src="https://img.icons8.com/?size=100&id=D8fI0PGNpq8i&format=png&color=000000" alt="Object-Oriented Programming" class="w-8 h-8">
-                <span class="text-gray font-semibold">OOP</span>
-            </li>
-        </ul>
-    </div>
-    
-    
-        
-    
-    
-</section>
 
+      </div>
 
+      <!-- Skills Section -->
+<div class="skills-section mt-12">
+  <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center animate-shimmer-text">Skills</h2>
+  <ul class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
 
+    <!-- HTML -->
+    <li class="skill-item flex flex-col items-center gap-2 p-4 rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 bg-gray-100 border border-gray-200 relative overflow-hidden group">
+      <img src="https://img.icons8.com/?size=100&id=20909&format=png&color=000000" alt="HTML" class="w-12 h-12">
+      <span class="font-medium text-gray-700 group-hover:text-indigo-500 transition-colors duration-300">HTML</span>
+      <div class="absolute inset-0 bg-gradient-to-r from-indigo-400 via-purple-400 to-indigo-400 opacity-20 blur-xl animate-shimmer pointer-events-none"></div>
+    </li>
 
-<div *ngIf="isModalVisible" class="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50">
-    <div class="bg-white p-6 rounded-lg max-w-md w-full">
-        <h3 class="text-2xl font-bold text-gray-900 mb-4">Contact Details</h3>
-        <p class="text-lg text-gray-700 mb-4">
-            Phone: <strong>0764039976</strong>
-        </p>
-        <p class="text-lg text-gray-700 mb-4">
-            Email: <strong>mphagonr460&#64;gmail.com</strong>
-        </p>
-        <p class="text-lg text-gray-700 mb-4">
-            LinkedIn: <strong><a href="https://www.linkedin.com" target="_blank" class="text-blue-600">View Profile</a></strong>
-        </p>
-        <p class="text-lg text-gray-700 mb-4">
-            GitHub: <strong><a href="https://github.com" target="_blank" class="text-blue-600">Visit GitHub</a></strong>
-        </p>
-        <button (click)="closeModal()" class="bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700">
-            Close
-        </button>
-    </div>
+    <!-- CSS -->
+    <li class="skill-item flex flex-col items-center gap-2 p-4 rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 bg-gray-100 border border-gray-200 relative overflow-hidden group">
+      <img src="https://img.icons8.com/?size=100&id=WlXoMrd84l96&format=png&color=000000" alt="CSS" class="w-12 h-12">
+      <span class="font-medium text-gray-700 group-hover:text-indigo-500 transition-colors duration-300">CSS</span>
+      <div class="absolute inset-0 bg-gradient-to-r from-indigo-400 via-purple-400 to-indigo-400 opacity-20 blur-xl animate-shimmer pointer-events-none"></div>
+    </li>
+
+    <!-- JavaScript -->
+    <li class="skill-item flex flex-col items-center gap-2 p-4 rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 bg-gray-100 border border-gray-200 relative overflow-hidden group">
+      <img src="https://img.icons8.com/?size=100&id=108784&format=png&color=000000" alt="JavaScript" class="w-12 h-12">
+      <span class="font-medium text-gray-700 group-hover:text-indigo-500 transition-colors duration-300">JavaScript</span>
+      <div class="absolute inset-0 bg-gradient-to-r from-indigo-400 via-purple-400 to-indigo-400 opacity-20 blur-xl animate-shimmer pointer-events-none"></div>
+    </li>
+
+    <!-- MySQL -->
+    <li class="skill-item flex flex-col items-center gap-2 p-4 rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 bg-gray-100 border border-gray-200 relative overflow-hidden group">
+      <img src="https://img.icons8.com/?size=100&id=rgPSE6nAB766&format=png&color=000000" alt="MySQL" class="w-12 h-12">
+      <span class="font-medium text-gray-700 group-hover:text-indigo-500 transition-colors duration-300">MySQL</span>
+      <div class="absolute inset-0 bg-gradient-to-r from-indigo-400 via-purple-400 to-indigo-400 opacity-20 blur-xl animate-shimmer pointer-events-none"></div>
+    </li>
+
+    <!-- Frontend Development -->
+    <li class="skill-item flex flex-col items-center gap-2 p-4 rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 bg-gray-100 border border-gray-200 relative overflow-hidden group">
+      <img src="https://img.icons8.com/?size=100&id=19293&format=png&color=000000" alt="Frontend" class="w-12 h-12">
+      <span class="font-medium text-gray-700 group-hover:text-indigo-500 transition-colors duration-300">Frontend Dev</span>
+      <div class="absolute inset-0 bg-gradient-to-r from-indigo-400 via-purple-400 to-indigo-400 opacity-20 blur-xl animate-shimmer pointer-events-none"></div>
+    </li>
+
+    <!-- Backend Development -->
+    <li class="skill-item flex flex-col items-center gap-2 p-4 rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 bg-gray-100 border border-gray-200 relative overflow-hidden group">
+      <img src="https://img.icons8.com/?size=100&id=44484&format=png&color=000000" alt="Backend" class="w-12 h-12">
+      <span class="font-medium text-gray-700 group-hover:text-indigo-500 transition-colors duration-300">Backend Dev</span>
+      <div class="absolute inset-0 bg-gradient-to-r from-indigo-400 via-purple-400 to-indigo-400 opacity-20 blur-xl animate-shimmer pointer-events-none"></div>
+    </li>
+
+    <!-- TypeScript -->
+    <li class="skill-item flex flex-col items-center gap-2 p-4 rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 bg-gray-100 border border-gray-200 relative overflow-hidden group">
+      <img src="https://img.icons8.com/?size=100&id=q8l2X20yd72l&format=png&color=000000" alt="TypeScript" class="w-12 h-12">
+      <span class="font-medium text-gray-700 group-hover:text-indigo-500 transition-colors duration-300">TypeScript</span>
+      <div class="absolute inset-0 bg-gradient-to-r from-indigo-400 via-purple-400 to-indigo-400 opacity-20 blur-xl animate-shimmer pointer-events-none"></div>
+    </li>
+
+    <!-- Node.js -->
+    <li class="skill-item flex flex-col items-center gap-2 p-4 rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 bg-gray-100 border border-gray-200 relative overflow-hidden group">
+      <img src="https://img.icons8.com/?size=100&id=hsPbhkOH4FMe&format=png&color=000000" alt="Node.js" class="w-12 h-12">
+      <span class="font-medium text-gray-700 group-hover:text-indigo-500 transition-colors duration-300">Node.js</span>
+      <div class="absolute inset-0 bg-gradient-to-r from-indigo-400 via-purple-400 to-indigo-400 opacity-20 blur-xl animate-shimmer pointer-events-none"></div>
+    </li>
+
+    <!-- Angular -->
+    <li class="skill-item flex flex-col items-center gap-2 p-4 rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 bg-gray-100 border border-gray-200 relative overflow-hidden group">
+      <img src="https://img.icons8.com/?size=100&id=dSnah6CSCxRG&format=png&color=000000" alt="Angular" class="w-12 h-12">
+      <span class="font-medium text-gray-700 group-hover:text-indigo-500 transition-colors duration-300">Angular</span>
+      <div class="absolute inset-0 bg-gradient-to-r from-indigo-400 via-purple-400 to-indigo-400 opacity-20 blur-xl animate-shimmer pointer-events-none"></div>
+    </li>
+
+    <!-- Tailwind CSS -->
+    <li class="skill-item flex flex-col items-center gap-2 p-4 rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 bg-gray-100 border border-gray-200 relative overflow-hidden group">
+      <img src="https://img.icons8.com/?size=100&id=WoopfRcDj3RF&format=png&color=000000" alt="Tailwind CSS" class="w-12 h-12">
+      <span class="font-medium text-gray-700 group-hover:text-indigo-500 transition-colors duration-300">Tailwind CSS</span>
+      <div class="absolute inset-0 bg-gradient-to-r from-indigo-400 via-purple-400 to-indigo-400 opacity-20 blur-xl animate-shimmer pointer-events-none"></div>
+    </li>
+
+    <!-- GitHub -->
+    <li class="skill-item flex flex-col items-center gap-2 p-4 rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 bg-gray-100 border border-gray-200 relative overflow-hidden group">
+      <img src="https://img.icons8.com/?size=100&id=efFfwotdkiU5&format=png&color=000000" alt="GitHub" class="w-12 h-12">
+      <span class="font-medium text-gray-700 group-hover:text-indigo-500 transition-colors duration-300">GitHub</span>
+      <div class="absolute inset-0 bg-gradient-to-r from-indigo-400 via-purple-400 to-indigo-400 opacity-20 blur-xl animate-shimmer pointer-events-none"></div>
+    </li>
+
+    <!-- OOP -->
+    <li class="skill-item flex flex-col items-center gap-2 p-4 rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 bg-gray-100 border border-gray-200 relative overflow-hidden group">
+      <img src="https://img.icons8.com/?size=100&id=D8fI0PGNpq8i&format=png&color=000000" alt="OOP" class="w-12 h-12">
+      <span class="font-medium text-gray-700 group-hover:text-indigo-500 transition-colors duration-300">Java</span>
+      <div class="absolute inset-0 bg-gradient-to-r from-indigo-400 via-purple-400 to-indigo-400 opacity-20 blur-xl animate-shimmer pointer-events-none"></div>
+    </li>
+
+  </ul>
 </div>
 
 
+    </div>
+  </section>
 
+  <!-- Footer -->
+  <footer class="mt-auto">
+    <app-footer></app-footer>
+  </footer>
 
-<app-footer></app-footer>
+</div>
+
+<style>
+/* Shimmer animations */
+@keyframes shimmer {
+  0% { background-position: -500px 0; }
+  100% { background-position: 500px 0; }
+}
+.animate-shimmer {
+  background-size: 1000px 100%;
+  animation: shimmer 3s linear infinite;
+}
+
+@keyframes shimmerText {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.animate-shimmer-text {
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: shimmerText 3s linear infinite;
+}
+
+@keyframes shimmerBlink {
+  0%, 100% { transform: translateX(-100%); opacity: 0; }
+  50% { transform: translateX(100%); opacity: 0.2; }
+}
+.animate-shimmer-blink {
+  animation: shimmerBlink 2s infinite;
+}
+</style>
