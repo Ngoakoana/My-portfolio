@@ -8,7 +8,7 @@
 body {
   font-family: "Raleway", sans-serif;
   font-weight: 500;
-  background: #0f0f0f;
+  background: #0a0a0a;
   color: #eaeaea;
   min-height: 100vh;
   display: flex;
@@ -25,7 +25,7 @@ body {
   align-items: center;
   padding: 60px 20px;
   background: 
-    linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+    linear-gradient(rgba(37, 37, 37, 0.65), rgba(4, 4, 4, 0.65)),
     url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97') 
     no-repeat center center/cover;
   text-align: center;
