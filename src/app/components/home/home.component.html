@@ -1,17 +1,169 @@
-<app-navbar></app-navbar>
+<div class="home-page">
+  <app-navbar></app-navbar>
 
-<section class="home">
-  <div class="container">
-    <h1 class="bling">Welcome to My Portfolio</h1>
-    <p>
-      Hi, I'm <strong>Ngoakoana Precious Mphago</strong>, a passionate and dedicated 
-      <span class="moving-text">software developer</span>.
-    </p>
-
-    <div class="cta">
-      <a routerLink="/about" class="button">Learn More About Me</a>
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <div class="greeting">
+            <span class="greeting-emoji">👋</span>
+            <span class="greeting-text">Hello, I'm</span>
+          </div>
+          
+          <h1 class="hero-title">
+            <span class="name-highlight">Ngoakoana</span>
+            <span class="surname">Mphago</span>
+          </h1>
+          
+          <div class="hero-subtitle">
+            <span class="role">System Developer</span>
+            <span class="location">• Gauteng, South Africa</span>
+          </div>
+          
+          <p class="hero-description">
+            Passionate about creating innovative, efficient, and inclusive technology solutions. 
+            Specializing in <strong>Information Technology System Support</strong> 
+            and <strong>Software Development</strong>.
+          </p>
+          
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number">3+</span>
+              <span class="stat-label">Years Experience</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">6</span>
+              <span class="stat-label">Projects</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">10+</span>
+              <span class="stat-label">Technologies</span>
+            </div>
+          </div>
+          
+          <div class="hero-actions">
+            <a routerLink="/projects" class="btn-primary">
+              <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+              </svg>
+              View My Work
+            </a>
+            <a routerLink="/contact" class="btn-secondary">
+              <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+              </svg>
+              Get In Touch
+            </a>
+          </div>
+        </div>
+        
+        <div class="hero-image">
+          <div class="image-wrapper">
+            <img 
+              src="https://avatars.githubusercontent.com/u/169890374?s=400&u=6366f6efe5e9a1e24052a5f91511aceb03158539&v=4" 
+              alt="Ngoakoana Mphago"
+              class="profile-image"
+            >
+            <div class="image-decoration"></div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+
+  <!-- About Section -->
+  <section class="about-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">About Me</h2>
+        <p class="section-subtitle">
+          As a burn survivor and disability advocate, I'm committed to creating accessible, 
+          user-friendly technologies that empower everyone.
+        </p>
+      </div>
+      
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon innovation">
+            <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+            </svg>
+          </div>
+          <h3 class="feature-title">Innovation</h3>
+          <p class="feature-description">Creating cutting-edge solutions that solve real-world problems</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon accessibility">
+            <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"></path>
+            </svg>
+          </div>
+          <h3 class="feature-title">Accessibility</h3>
+          <p class="feature-description">Building inclusive technology that empowers everyone</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon impact">
+            <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+          </div>
+          <h3 class="feature-title">Impact</h3>
+          <p class="feature-description">Making a positive difference in my community through technology</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="skills-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Technical Skills</h2>
+        <p class="section-subtitle">Technologies and tools I work with</p>
+      </div>
+      
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3 class="category-title">Frontend</h3>
+          <div class="skills-list">
+            <span class="skill-tag">HTML5</span>
+            <span class="skill-tag">CSS3</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">TypeScript</span>
+            <span class="skill-tag">Angular</span>
+            <span class="skill-tag">React</span>
+          </div>
+        </div>
+        
+        <div class="skill-category">
+          <h3 class="category-title">Backend</h3>
+          <div class="skills-list">
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">Express.js</span>
+            <span class="skill-tag">PHP</span>
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">Spring Boot</span>
+            <span class="skill-tag">MySQL</span>
+          </div>
+        </div>
+        
+        <div class="skill-category">
+          <h3 class="category-title">Tools & Others</h3>
+          <div class="skills-list">
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">GitHub</span>
+            <span class="skill-tag">VS Code</span>
+            <span class="skill-tag">Firebase</span>
+            <span class="skill-tag">MongoDB</span>
+            <span class="skill-tag">PostgreSQL</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
 
 
